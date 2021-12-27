@@ -3,17 +3,18 @@ exec stock_csr.sci
 
 [fich,mod]=mopen("test_mat_vec.dat" , "w")
 
-for n=2:2:60
- for m = 4:4:60
+for size_=10:10:500
+
     temp_matcsr_vect = 0 
     temp_mat_vect=0 
     
- 
+    disp(size_)
     for rep=1:10 
     
-    v=rand(m,1)
+    
+    v=rand(size_,1)
     FILL = 0.35;
-    A = sprand(n,m,FILL);
+    A = sprand(size_,size_,FILL);
     A = full (A);
     [AA,JA,IA,n,m,nnz_]=stock_csr(A)
 
@@ -28,8 +29,8 @@ for n=2:2:60
   
     
     end
-    mfprintf(fich,"%.16lf %.16lf %d   \n",temp_mat_vect/10,temp_matcsr_vect/10 ,n*m )
+    mfprintf(fich,"%.16lf %.16lf %d   \n",temp_mat_vect/10,temp_matcsr_vect/10 ,size_ )
     
 end
-end 
+
 mclose(fich)

@@ -6,6 +6,8 @@ nnz_=1;
 AA =list();
 IA=list(1); // le premier ele de la liste =1
 JA=list();
+n=size(A,1)
+m=size(A,2)
 for i=1 :n
     for j=1 :m
         if  A(i,j)~=0

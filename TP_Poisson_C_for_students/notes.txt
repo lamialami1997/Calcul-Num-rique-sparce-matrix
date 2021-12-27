@@ -1,0 +1,12 @@
+sudo apt-get install liblapacke-dev // solution pour l'include lapacke.h 
+LAPACK se base sur BLAS 
+AB // LA MATRICE EN GENERALE BANDE , ON STOCK LES DIAGGOLANE 
+// 1 ERE LIGNE DE MA MATRICE AB(GENERAL BANDE ) 
+info de dgbsv un code en fortran : appel a des fct ( deux appels DGBTRF ET DGBTRS ) il faut lire la doc des deux  et expliquer qsq sa fait ===> repondre a la question à l'appel fortan <LAPLACK , BLAS> ( qsq que c'est KV ) 
+LU est pri au stockage LU  et pour tester ( ==> les matrice diagonale ) 
+
+band storage : http://www.netlib.org/lapack/lug/node124.html
+Tutoriel : utilisation de LAPACK et des BLAS : https://lipn.univ-paris13.fr/~coti/doc/tutolapack.pdf
+
+dgbsv() : http://www.netlib.org/lapack/explore-html/d3/d49/group__double_g_bsolve_gafa35ce1d7865b80563bbed6317050ad7.html
+

@@ -3,7 +3,7 @@
 function [L] = cholesky(A)
    n = size(A,1);
  
-   A(1,1) = sqrt(A(1,1)); // premier element de la matrice A et L réspictivement 
+   A(1,1) = sqrt(A(1,1));  
    A(2:n,1) = (A(2:n,1)/A(1,1));
    for j = 2 : n-1
         for p = 1 : j-1 
@@ -18,4 +18,3 @@ function [L] = cholesky(A)
     A(n,n) =sqrt(A(n,n) - (A(n,1:n-1) * A'(1:n-1,n)));
     L = tril(A);
 endfunction
-    
